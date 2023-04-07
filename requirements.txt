@@ -1,3 +1,2 @@
 streamlit
 qrcode
-base64
