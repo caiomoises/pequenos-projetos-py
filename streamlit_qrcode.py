@@ -1,6 +1,7 @@
 import streamlit as st
 import qrcode
 from io import BytesIO
+import base64
 
 st.title('App para gerar QR Code')
 
@@ -23,4 +24,8 @@ if texto:
     img_bytes = img_bytes.getvalue()
     
     st.image(img_bytes, caption='QR Code gerado')
+
+    b64 = base64.b64encode(img_bytes).decode()
+    href = f'<a href="data:file/png;base64,{b64}" download="qrcode.png">Download do QR Code</a>'
+    st.markdown(href, unsafe_allow_html=True)
 
