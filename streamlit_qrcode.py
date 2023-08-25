@@ -5,7 +5,7 @@ import base64
 
 st.title('App para gerar QR Code')
 
-texto = st.text_input('Digite o texto para gerar o QR Code:')
+texto = st.text_input('Digite para gerar o QR Code:')
 
 if texto:
     qr = qrcode.QRCode(
