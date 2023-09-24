@@ -13,10 +13,11 @@ if __name__ == '__main__':
             print(f'O fatorial de {x} é {fat(x)}\n')
         if op == 2:
             x = int(input('Quantos valores da sequencia de fibonacci deseja ver: '))
-            fibonacci(x-1)
-            print(f'\n')
+            print(f'Os {x} primeiros valores da sequencia é: {fibonacci(x-2)}\n')
         if op == 3:
             ...
         if op == 4:
             print('Obrigado por usar este programa!')
             break
+        else:
+            print('Opção invalida!\n')
